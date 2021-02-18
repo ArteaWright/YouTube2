@@ -19,7 +19,7 @@ this.setState({videos: respond.data.items, selectedVideo: respond.data.items[0]}
 }
 
 onSelect = (videos) => {
-    this.setState({selectedVideo:videos , videos:videos});
+    this.setState({...this.state , selectedVideo:videos.videos});
 }
 
 render() {
