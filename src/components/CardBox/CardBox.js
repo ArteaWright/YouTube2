@@ -4,13 +4,26 @@ import './CardBox.css';
 
 class CardBox extends Component {
 
+    state = {
+        video: "", 
+        selectedVideo: null
+    }
+
         Cards = [
      {
-        searchTerm: "Health", 
+        searchTerm: "Beauty", 
         Title: "Health",
 
      }
     ]
+
+    handleSubmit = async (searchTerm) => {
+        const results = await Youtube.get('search', { params: {q: "Beauty"}});
+        console.log(results)
+        this.setState({videos: results.data.items, selectedVideo: results.data.items[0]});
+        // console.log(results.data.items[0].id.videoId)
+
+    }
 
     render() {
         return (
@@ -18,7 +31,7 @@ class CardBox extends Component {
                 <div className="outerWrap">
                     
             {this.Cards.map(card => {
-                return <div className="cardbox" onClick={()=> handleClick(card.searchTerm)}>{card.Title}</div> 
+                return <div key={card.Title} className="cardbox" onClick={this.handleSubmit}>{card.Title}</div> 
             })}
                 </div>
             </React.Fragment>
