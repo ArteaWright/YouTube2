@@ -1,10 +1,14 @@
 import './App.css';
 import Home from './Pages/Home';
+import Sidebar from './components/Sidebar/Sidebar'
 
 function App() {
   return (
     <div>
       <Home/>
+      <div className="app-page">
+        <Sidebar/>
+      </div>
       {/* <h2>Hamburger Menu</h2>
       <h2>Logo</h2>
       <h3>Search Bar</h3>

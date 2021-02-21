@@ -1,9 +1,28 @@
 .Searchbar {
+    flex:33%;
     width: 70vw;
     margin: 1px auto;
+    display: flex;
+    align-items: center;
+}
+
+.Search-contain {
+    display: flex;
+    align-items: center;
+    margin-left:20%;
+    width: 50%;
+    border: 1px solid gray;
+
+}
+
+.Search-contain > input {
+    flex:1;
+    border: none;
 }
 
 .Search {
+    display: flex;
+    align-items: center;
     border: 1px solid gray;
     border-radius: 2px 0px 0px 2px;
     padding: 5px;
@@ -11,10 +30,17 @@
     width: 45vw;
 }
 
-.Sbutton {
+/* .Sbutton {
     border: none;
     background: gray;
     padding: 6px;
+} */
+
+.Search-button{
+    width:50px !important;
+    background-color: #726e6e;
+    border-left: 1px solid rgb(51, 49, 49);
+    color:rgb(231, 220, 220);
 }
 
 input, select, textarea{
