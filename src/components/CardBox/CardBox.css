@@ -1,0 +1,19 @@
+.card-container {
+    flex: 0.8;
+    background-color: #f9f9f9;
+}
+
+
+.outerWrap{
+    width: 50%;
+    margin: 10vh auto;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 53%);
+    grid-template-rows: repeat(2, 300px);
+}
+
+.cardBox {
+    margin: 0 2vw;
+}

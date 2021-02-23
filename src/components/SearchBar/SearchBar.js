@@ -25,7 +25,9 @@ render() {
             <form className="Searchbar" onSubmit={this.handleSubmit}>
             <label className="Search-contain">
               <input className="Search" type="text" name="name" placeholder="Search..." onChange={this.handleChange}/>
-              <SearchIcon className="Search-button"/>
+                <button className="Search-button">
+                <SearchIcon/> 
+                </button>
             </label>
             {/* <input className="Sbutton" type="submit" value="Search"/> */}
            

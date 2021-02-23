@@ -1,0 +1,42 @@
+import React, { Component } from 'react';
+import Youtube from '../../API/Youtube';
+import './CardBox.css';
+
+class CardBox extends Component {
+
+    state = {
+        video: "", 
+        selectedVideo: null
+    }
+
+        Cards = [
+     {
+        searchTerm: "Beauty", 
+        Title: "Health",
+
+     }
+    ]
+
+    handleSubmit = async (searchTerm) => {
+        const results = await Youtube.get('search', { params: {q: "Beauty"}});
+        console.log(results)
+        this.setState({videos: results.data.items, selectedVideo: results.data.items[0]});
+        // console.log(results.data.items[0].id.videoId)
+
+    }
+
+    render() {
+        return (
+            <div className="card-container">
+                <div className="outerWrap">
+                    
+            {this.Cards.map(card => {
+                return <div key={card.Title} className="cardbox" onClick={this.handleSubmit}>{card.Title}</div> 
+            })}
+                </div>
+            </div>
+        )
+    }
+}
+
+export default CardBox; 

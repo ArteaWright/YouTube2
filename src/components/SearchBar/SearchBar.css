@@ -1,7 +1,6 @@
 .Searchbar {
-    flex:33%;
     width: 70vw;
-    margin: 1px auto;
+    /* margin: 1px auto; */
     display: flex;
     align-items: center;
 }
@@ -39,8 +38,10 @@
 .Search-button{
     width:50px !important;
     background-color: #726e6e;
-    border-left: 1px solid rgb(51, 49, 49);
+    border-left: 1px solid rgb(175, 175, 175);
+    border: none;
     color:rgb(231, 220, 220);
+    border-left: none;
 }
 
 input, select, textarea{
