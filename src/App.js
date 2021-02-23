@@ -1,11 +1,11 @@
 import './App.css';
-// import Home from './Pages/Home';
-import ContactUs from './Pages/ContactUs/ContactUs';
+import Home from './Pages/Home';
+// import ContactUs from './Pages/ContactUs/ContactUs';
 
 function App() {
   return (
     <div>
-      <ContactUs/>
+      <Home/>
       {/* <Home/> */}
       {/* <h2>Hamburger Menu</h2>
       <h2>Logo</h2>
