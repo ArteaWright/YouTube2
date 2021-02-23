@@ -11,7 +11,7 @@ class CardBox extends Component {
 
         Cards = [
      {
-        searchTerm: "Beauty", 
+        searchTerm: "Nutrition", 
         Title: "Health",
 
      }
