@@ -2,7 +2,7 @@ import React from 'react';
 import './Videos.css';
 
 const Videos = ({ videos }) => {
-    if(!videos) return <div>...</div>
+    if(!videos) return <div></div>
 
     console.log(videos, videos.id, videos.id.videoId);
     const videoId = videos.id.videoId;
