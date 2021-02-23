@@ -18,7 +18,8 @@ class CardBox extends Component {
     ]
 
     handleSubmit = async (searchTerm) => {
-        const results = await Youtube.get('search', { params: {q: "Beauty"}});
+        const results = await Youtube.get('search', { params: {q: searchTerm}});
+        console.log(searchTerm)
         console.log(results)
         this.setState({videos: results.data.items, selectedVideo: results.data.items[0]});
         // console.log(results.data.items[0].id.videoId)
@@ -31,7 +32,7 @@ class CardBox extends Component {
                 <div className="outerWrap">
                     
             {this.Cards.map(card => {
-                return <div key={card.Title} className="cardbox" onClick={this.handleSubmit}>{card.Title}</div> 
+                return <div key={card.Title} className="cardbox" onClick={() => this.handleSubmit(card.searchTerm)}>{card.Title}</div> 
             })}
                 </div>
             </React.Fragment>
