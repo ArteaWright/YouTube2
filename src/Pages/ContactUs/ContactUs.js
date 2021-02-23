@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import Nav from '../../components/Navigation/Navigation'
 import './ContactUs.scss';
-
+import Background from './contact-us.jpg';
 import Email from '../../services/email';
 
 class ContactUs extends Component {
@@ -46,7 +46,7 @@ class ContactUs extends Component {
             <React.Fragment>
                 <Nav/>
                 <div className="contact-us">
-                    <div className="wrapper">
+                    <div className="wrapper" style={{backgroundImage : `url(${Background})`}}>
                         <div className="contact__container">
                             <div className="contact__title">
                                 <h2>Contact us<hr/></h2>
