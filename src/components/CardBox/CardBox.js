@@ -1,32 +1,57 @@
 import React, { Component } from 'react';
 import Youtube from '../../API/Youtube';
+import Videos from '../Videos/Videos';
+import VideoList from '../VideoList/VideoList';
 import './CardBox.css';
 
 class CardBox extends Component {
 
     state = {
-        video: "", 
+        videos: [],
         selectedVideo: null
     }
 
         Cards = [
      {
-        searchTerm: "Beauty", 
+        searchTerm: "Health", 
         Title: "Health",
 
+     }, 
+     {
+         searchTerm:"Makeup", 
+         Title: "Beauty"
+     },
+     {
+        searchTerm:"Video Games", 
+        Title: "Gamers"
+     }, 
+     {
+         searchTerm: "Pranks", 
+         Title: "Pranks"
+     },
+     {
+         searchTerm:"DIY",
+         Title: "DIY"
+     }, 
+     {
+         searchTerm:"Try on haul", 
+         Title: "Fashion"
      }
     ]
 
     handleSubmit = async (searchTerm) => {
         const results = await Youtube.get('search', { params: {q: searchTerm}});
-        console.log(searchTerm)
-        console.log(results)
         this.setState({videos: results.data.items, selectedVideo: results.data.items[0]});
-        // console.log(results.data.items[0].id.videoId)
+        console.log(results.data.items)
+        document.querySelector('.outerWrap').style.display = 'none';
+    }
 
+    onSelect = (videos) => {
+        this.setState({...this.state , selectedVideo:videos.videos});
     }
 
     render() {
+        const {videos, selectedVideo} = this.state;
         return (
             <React.Fragment>
                 <div className="outerWrap">
@@ -35,6 +60,8 @@ class CardBox extends Component {
                 return <div key={card.Title} className="cardbox" onClick={() => this.handleSubmit(card.searchTerm)}>{card.Title}</div> 
             })}
                 </div>
+                <Videos videos={selectedVideo}/>
+                <VideoList videos={videos} onSelect={this.onSelect}/>
             </React.Fragment>
         )
     }

@@ -32,7 +32,7 @@ onSelect = (videos) => {
                 <SearchBar onFormSubmit={this.handleSubmit}/>
                 <Videos videos={selectedVideo}/>
                 <VideoList videos={videos} onSelect={this.onSelect}/>
-                <CardBox/>
+                <CardBox />
             </React.Fragment>
         );
     }
