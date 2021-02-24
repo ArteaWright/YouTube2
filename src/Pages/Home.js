@@ -5,6 +5,7 @@ import Videos from '../components/Videos/Videos';
 import Youtube from '../API/Youtube';
 import SearchBar from '../components/SearchBar/SearchBar';
 import CardBox from '../components/CardBox/CardBox';
+import Sidebar from '../components/Sidebar/Sidebar';
 
 
 class Home extends Component {
@@ -29,6 +30,7 @@ onSelect = (videos) => {
         return(
             <React.Fragment>
                 <Nav/>
+                <Sidebar/>
                 <SearchBar onFormSubmit={this.handleSubmit}/>
                 <Videos videos={selectedVideo}/>
                 <VideoList videos={videos} onSelect={this.onSelect}/>

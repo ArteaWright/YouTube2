@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Youtube from '../../API/Youtube';
+import SearchIcon from '@material-ui/icons/Search';
 import './SearchBar.css';
  
 class SearchBar extends Component {  
@@ -20,11 +21,14 @@ handleSubmit = (event) => {
 
 render() {
         return(
-            <form className="Searchbar" onSubmit={this.handleSubmit}>
-            <label>
-              <input className="Search" type="text" name="name" placeholder="Search..." onChange={this.handleChange}/>
-            </label>
-            <input className="Sbutton" type="submit" value="Search"/>
+          <form className="Searchbar" onSubmit={this.handleSubmit}>
+          <label className="Search-contain">
+            <input className="Search" type="text" name="name" placeholder="Search..." onChange={this.handleChange}/>
+              <button className="Search-button">
+              <SearchIcon/> 
+              </button>
+          </label>
+
           </form>
         );
     }

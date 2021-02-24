@@ -3,7 +3,7 @@ import YouTubeIcon from "@material-ui/icons/YouTube";
 import MenuIcon from "@material-ui/icons/Menu";
 import { SideBarData } from "./SideData";
 import "./Sidebar.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function Sidebar({ selected }) {
   return (

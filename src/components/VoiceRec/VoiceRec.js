@@ -1,4 +1,7 @@
 import React from "react";
+import MicNoneOutlinedIcon from '@material-ui/icons/MicNoneOutlined';
+import "./VoiceRec.css";
+
 class VoiceRec extends React.Component {
     constructor(props) {
         super(props)
@@ -27,7 +30,10 @@ class VoiceRec extends React.Component {
     render() {
         return (
             <div>
-                <button onClick={this.startRecorder}>Click me</button>
+                <button className="mic-button">
+                <MicNoneOutlinedIcon id="mic-icon" onClick={this.startRecorder}/> 
+                </button>
+               
             </div>
         )
     }
