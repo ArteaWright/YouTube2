@@ -1,0 +1,22 @@
+.Searchbar {
+    width: 70vw;
+    margin: 1px auto;
+}
+
+.Search {
+    border: 1px solid gray;
+    border-radius: 2px 0px 0px 2px;
+    padding: 5px;
+    background-color: #181818;
+    width: 45vw;
+}
+
+.Sbutton {
+    border: none;
+    background: gray;
+    padding: 6px;
+}
+
+input, select, textarea{
+    color: white;
+}

@@ -15,7 +15,6 @@ class VoiceRec extends React.Component {
 
         recognition.start();
 
-
         console.log(this.props)
 
         // captures the input from the users speech

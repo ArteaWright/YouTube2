@@ -1,0 +1,15 @@
+.outerNav{
+    height: 9vh;
+    background-color: #282828;
+}
+.Navigation {
+    color: white;
+    width: 85vw;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.Navigation > h4 {
+    width: 13%;
+}
