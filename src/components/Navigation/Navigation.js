@@ -5,11 +5,20 @@ import Youtube from '../../API/Youtube';
 import './Navigation.css';
 import SearchBar from '../SearchBar/SearchBar';
 import VoiceRec from "../VoiceRec/VoiceRec"
+import MenuIcon from "@material-ui/icons/Menu";
+import VideoCallOutlinedIcon from "@material-ui/icons/VideoCallOutlined";
+import AppsOutlinedIcon from "@material-ui/icons/AppsOutlined";
+import NotificationsOutlinedIcon from "@material-ui/icons/NotificationsOutlined";
+import PersonOutlinedIcon from "@material-ui/icons/PersonOutlined";
+import YouTubeIcon from '@material-ui/icons/YouTube';
+
+ 
 
 class Nav extends Component {
 
     render() {
         return (
+
             <div className="outerNav">
                 <nav className="Navigation">
                     {/* Hamburger Menu */}
@@ -20,6 +29,7 @@ class Nav extends Component {
                     <h4>Other Icons <VoiceRec onRecord={(msg) => { this.props.onRecord(msg) }} /></h4>
                 </nav>
             </div>
+
 
         );
     }

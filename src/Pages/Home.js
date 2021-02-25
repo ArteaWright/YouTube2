@@ -5,6 +5,7 @@ import Videos from '../components/Videos/Videos';
 import Youtube from '../API/Youtube';
 import SearchBar from '../components/SearchBar/SearchBar';
 import CardBox from '../components/CardBox/CardBox';
+import Sidebar from '../components/Sidebar/Sidebar';
 
 
 class Home extends Component {
@@ -29,10 +30,12 @@ class Home extends Component {
         const { videos, selectedVideo } = this.state;
         return (
             <React.Fragment>
+
                 <Nav onRecord={(msg) => { this.setState({ voiceSearch: msg }) }} />
                 <SearchBar value={this.state.voiceSearch} onFormSubmit={this.handleSubmit} />
                 <Videos videos={selectedVideo} />
                 <VideoList videos={videos} onSelect={this.onSelect} />
+
                 <CardBox />
             </React.Fragment>
         );

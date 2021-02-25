@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Youtube from '../../API/Youtube';
+import SearchIcon from '@material-ui/icons/Search';
 import './SearchBar.css';
 
 class SearchBar extends Component {
@@ -19,6 +20,7 @@ class SearchBar extends Component {
       this.setState({ searchWord: this.props.value })
     }
   }
+
 
 
   handleChange = (event) => {
@@ -43,6 +45,7 @@ class SearchBar extends Component {
       </form>
     );
   }
+
 }
 
 export default SearchBar;

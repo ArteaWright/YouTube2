@@ -1,0 +1,4 @@
+.mic-button:hover > #mic-icon {
+          color:red;
+          cursor:pointer;
+}
