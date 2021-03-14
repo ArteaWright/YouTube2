@@ -1,7 +1,7 @@
 /* eslint-disable no-script-url */
 import React, { Component } from 'react';
 import Nav from '../../components/Navigation/Navigation'
-import './ContactUs.scss';
+import './ContactUs.css';
 import Background from './contact-us.jpg';
 import Email from '../../services/email';
 
@@ -18,15 +18,15 @@ class ContactUs extends Component {
             'last_name': lastName.value,
             'email': email.value,
             'comment': comment.value
-        }).then( () => {
+        }).then(() => {
             // alert('Emailed!');
             document.getElementById('error-message').innerHTML = 'Emailed!'
             // document.getElementById('error-message').style.display = 'block'
-        }).catch ((err) => {
+        }).catch((err) => {
             if (err.response) {
                 document.getElementById('error-message').innerHTML = err.response.data.error
                 // document.getElementById('error-message').style.display = 'block'
-              }
+            }
         })
         document.getElementById('error-message').innerHTML = 'Emailing!'
         document.getElementById('error-message').style.display = 'block'
@@ -42,31 +42,31 @@ class ContactUs extends Component {
     }
 
     render() {
-        return(
+        return (
             <React.Fragment>
-                <Nav/>
+                <Nav />
                 <div className="contact-us">
-                    <div className="wrapper" style={{backgroundImage : `url(${Background})`}}>
+                    <div className="wrapper" style={{ backgroundImage: `url(${Background})` }}>
                         <div className="contact__container">
                             <div className="contact__title">
-                                <h2>Contact us<hr/></h2>
+                                <h2>Contact us<hr /></h2>
                             </div>
-                            
+
                             <form action="#" onSubmit={this.sendEmail} className="contact__form">
-                                    <p>First Name</p>
-                                    <input required name="firstName" id="first-name" className="contact__form-input" type="text"/>
+                                <p>First Name</p>
+                                <input required name="firstName" id="first-name" className="contact__form-input" type="text" />
 
-                                    <p>Last Name</p>
-                                    <input required name="lastName" id="last-name" className="contact__form-input" type="text"/>
+                                <p>Last Name</p>
+                                <input required name="lastName" id="last-name" className="contact__form-input" type="text" />
 
-                                    <p>Email</p>
-                                    <input required name="email" id="email" onChange={this.checkEmailValidity} className="contact__form-input" type="text"/>
+                                <p>Email</p>
+                                <input required name="email" id="email" onChange={this.checkEmailValidity} className="contact__form-input" type="text" />
 
-                                    <p>Comment</p>
-                                    <textarea required name="comment" id="comment" className="contact__form-textarea" type="text"></textarea>
+                                <p>Comment</p>
+                                <textarea required name="comment" id="comment" className="contact__form-textarea" type="text"></textarea>
 
-                                    <input type="submit" value="Email"/>
-                                    <h2 id="error-message">Error</h2>
+                                <input type="submit" value="Email" />
+                                <h2 id="error-message">Error</h2>
                             </form>
                         </div>
                     </div>
