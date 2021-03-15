@@ -35,7 +35,7 @@ class Home extends Component {
                 <SearchBar value={this.state.voiceSearch} onFormSubmit={this.handleSubmit} />
                 <Videos videos={selectedVideo} />
                 <VideoList videos={videos} onSelect={this.onSelect} />
-
+                <Sidebar/>
                 <CardBox />
             </React.Fragment>
         );
