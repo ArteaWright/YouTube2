@@ -53,7 +53,7 @@ class CardBox extends Component {
     render() {
         const { videos, selectedVideo } = this.state;
         return (
-            <React.Fragment>
+            <div className="card-container">
                 <div className="outerWrap">
 
                     {this.Cards.map(card => {
@@ -62,7 +62,7 @@ class CardBox extends Component {
                 </div>
                 <Videos videos={selectedVideo} />
                 <VideoList videos={videos} onSelect={this.onSelect} />
-            </React.Fragment>
+            </div>
         )
     }
 }

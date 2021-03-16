@@ -1,12 +1,25 @@
 import './App.css';
 import Home from './Pages/Home';
-import ContactUs from './Pages/ContactUs/ContactUs';
+import ContactUs from './Pages/ContactUs';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App() {
   return (
-    <div>
-      <ContactUs />
+    <div className="background">
+      {/* <Home/> */}
+      <>
+        <Router>
+          <Switch>
+            <Route exact path="/" component={Home}></Route>
+            <Route exact path="/contact" component={ContactUs} />
+          </Switch>
+        </Router>
 
+      </>
     </div>
   );
 }

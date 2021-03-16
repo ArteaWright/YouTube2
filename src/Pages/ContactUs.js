@@ -1,10 +1,13 @@
 /* eslint-disable no-script-url */
 import React, { Component } from 'react';
-import Nav from '../../components/Navigation/Navigation'
-import './ContactUs.css';
-import Background from './contact-us.jpg';
+import Nav from '../components/Navigation/Navigation'
+// import './ContactUs.css';
+// import Background from './contact-us.jpg';
 // import Email from '../../services/email';
-import Youtube from '../../API/Youtube';
+import Youtube from '../API/Youtube';
+import Background from './ContactUs/contact-us.jpg';
+import './ContactUs/ContactUs.css';
+
 
 class ContactUs extends Component {
 

@@ -1,3 +1,9 @@
+.mic-button {
+    position: absolute;
+    left: 20%;
+    top: 40px;
+}
+
 .mic-button:hover > #mic-icon {
           color:red;
           cursor:pointer;
