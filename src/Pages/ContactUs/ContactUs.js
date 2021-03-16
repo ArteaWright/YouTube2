@@ -3,33 +3,36 @@ import React, { Component } from 'react';
 import Nav from '../../components/Navigation/Navigation'
 import './ContactUs.css';
 import Background from './contact-us.jpg';
-import Email from '../../services/email';
+// import Email from '../../services/email';
+import Youtube from '../../API/Youtube';
 
 class ContactUs extends Component {
-    sendEmail = (e) => {
+
+
+    sendEmail = async (e) => {
         e.preventDefault()
-        const firstName = document.getElementById('first-name')
-        const lastName = document.getElementById('last-name')
-        const email = document.getElementById('email')
-        const comment = document.getElementById('comment')
-        let emailer = new Email();
-        emailer.post({
-            'first_name': firstName.value,
-            'last_name': lastName.value,
-            'email': email.value,
-            'comment': comment.value
-        }).then(() => {
-            // alert('Emailed!');
-            document.getElementById('error-message').innerHTML = 'Emailed!'
-            // document.getElementById('error-message').style.display = 'block'
-        }).catch((err) => {
-            if (err.response) {
-                document.getElementById('error-message').innerHTML = err.response.data.error
-                // document.getElementById('error-message').style.display = 'block'
+        const firstName = document.getElementById('first-name').value
+        const lastName = document.getElementById('last-name').value
+        const email = document.getElementById('email').value
+        const comment = document.getElementById('comment').value
+
+        await Youtube.post('contact', {
+            first_name: firstName,
+            last_name: lastName,
+            email,
+            comment,
+        }).then(r => {
+            if (r.data.sucesss) {
+                document.getElementById('error-message').innerHTML = 'Emailing!'
+                document.getElementById('error-message').style.display = 'block'
+            } else {
+                alert('Something went wrong try again later')
             }
-        })
-        document.getElementById('error-message').innerHTML = 'Emailing!'
-        document.getElementById('error-message').style.display = 'block'
+
+        });
+
+
+
     }
 
     checkEmailValidity = (e) => {

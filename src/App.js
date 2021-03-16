@@ -5,8 +5,8 @@ import ContactUs from './Pages/ContactUs/ContactUs';
 function App() {
   return (
     <div>
-      <Home/>
-      
+      <ContactUs />
+
     </div>
   );
 }

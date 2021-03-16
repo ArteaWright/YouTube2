@@ -4,6 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var videosRouter = require('./routes/videos');
+var contactRouter = require("./routes/contact")
 const cors = require('cors');
 
 
@@ -18,6 +19,8 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/videos', videosRouter);
+
+app.use("/contact", contactRouter)
 
 app.listen(3001);
 

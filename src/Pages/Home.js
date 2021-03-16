@@ -16,10 +16,11 @@ class Home extends Component {
     }
 
     handleSubmit = async (searchWord) => {
-        const respond = await Youtube.get('search', { params: { q: searchWord } });
+        const respond = await Youtube.get('videos/search', { params: { q: searchWord } });
 
         console.log(respond.data.items);
-        this.setState({ videos: respond.data.items, selectedVideo: respond.data.items[0] });
+        this.setState({ videos: respond.data.items, selectedVideo: respond.data.items });
+        // this.setState({ videos: respond.data.items, selectedVideo: respond.data.items[0] });
         document.querySelector('.outerWrap').style.display = 'none';
     }
 
