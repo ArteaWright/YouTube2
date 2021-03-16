@@ -1,9 +1,9 @@
 /* eslint-disable no-script-url */
 import React, { Component } from 'react';
-import Nav from '../../components/Navigation/Navigation'
-import './ContactUs.css';
-import Background from './contact-us.jpg';
-import Email from '../../services/email';
+import Nav from '../components/Navigation/Navigation'
+import './ContactUs/ContactUs.css';
+import Background from './ContactUs/contact-us.jpg';
+import Email from '../services/email';
 
 class ContactUs extends Component {
     sendEmail = (e) => {

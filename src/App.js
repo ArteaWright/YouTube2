@@ -1,13 +1,25 @@
 import './App.css';
 import Home from './Pages/Home';
-import ContactUs from './Pages/ContactUs/ContactUs';
-import Sidebar from './components/Sidebar/Sidebar';
+import ContactUs from './Pages/ContactUs';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="background">
-      <Home/>
+      {/* <Home/> */}
+      <>
+   <Router>
+     <Switch>
+       <Route exact path="/" component={Home}></Route>
+       <Route exact path="/contact" component={ContactUs} />
+     </Switch>
+   </Router>
 
+   </>
     </div>
   );
 }
