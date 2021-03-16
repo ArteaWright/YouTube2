@@ -22,7 +22,7 @@ class CardBox extends Component {
             Title: "Beauty"
         },
         {
-            searchTerm: "Video Games",
+            searchTerm: "Gaming",
             Title: "Gamers"
         },
         {
@@ -41,8 +41,8 @@ class CardBox extends Component {
 
     handleSubmit = async (searchTerm) => {
         const results = await Youtube.get('videos/search', { params: { q: searchTerm } });
-        this.setState({ videos: results.data.items, selectedVideo: results.data.items[0] });
-        console.log(results.data.items)
+        this.setState({ videos: results.data.videos, selectedVideo: results.data.videos[0] });
+
         document.querySelector('.outerWrap').style.display = 'none';
     }
 

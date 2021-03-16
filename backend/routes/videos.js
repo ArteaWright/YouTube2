@@ -14,7 +14,11 @@ router.get('/search', function (req, res, next) {
     connection.query('Select * From videos', function (error, results, fields) {
         if (error) throw error;
 
-        res.json({ videos: results.filter(r => r.title.toLowerCase().includes(searchTerm.toLowerCase())) || [] })
+        res.json({
+            videos: results.filter(r => r.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                r.category.toLowerCase().includes(searchTerm.toLowerCase())
+            ) || []
+        })
     });
 
 });
