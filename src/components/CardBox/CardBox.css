@@ -1,3 +1,8 @@
+.card-container {
+    flex: 0.8;
+  
+}
+
 .outerWrap{
     height: 100vh;
     width: 50%;
@@ -10,6 +15,7 @@
 }
 
 .cardbox {
+    cursor: pointer;
     color: white;
     font-weight: bold;
     background: black;

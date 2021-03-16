@@ -33,6 +33,7 @@
 }
 
 .Search-button{
+    cursor: pointer;
     width:50px !important;
     background-color: #726e6e;
     border-left: 1px solid rgb(175, 175, 175);
