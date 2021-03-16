@@ -6,9 +6,12 @@
 }
 
 .Search-contain {
+    position: absolute;
+    z-index: 101;
+    top: 42px;
+    left: 25%;
     display: flex;
     align-items: center;
-    margin-left:50%;
     width: 50%;
     border: 1px solid gray;
 

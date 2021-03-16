@@ -30,6 +30,8 @@ class SearchBar extends Component {
 
     onFormSubmit(searchWord);
     event.preventDefault();
+    document.querySelector('.outerWrap').style.display = 'none';
+    document.querySelector('.sidebar-contain').style.display= 'none';
   };
 
   render() {
