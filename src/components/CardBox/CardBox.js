@@ -34,7 +34,7 @@ class CardBox extends Component {
             Title: "DIY"
         },
         {
-            searchTerm: "Try on haul",
+            searchTerm: "Clothes",
             Title: "Fashion"
         }
     ]

@@ -26,9 +26,9 @@ function Sidebar({ selected }) {
         })}
       </ul>
       <hr />
-        <Router>
-          <Link to="/contact">Contact Us</Link>
-        </Router>
+      {/* <Router> */}
+      <Link to="/contact">Contact Us</Link>
+      {/* </Router> */}
     </div>
   );
 }

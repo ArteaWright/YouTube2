@@ -8,7 +8,7 @@ const VideoItem = ({ videos, onSelect }) => {
       <div className="listOuter">
         <div>
           <div style={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
-            <img style={{ marginRight: '20px' }} alt="thumbnail" src={videos.img_url} onClick={() => onSelect({ videos })} />
+            <img style={{ marginRight: '20px', height: '300px', width: "450px" }} alt="thumbnail" src={videos.img_url} onClick={() => onSelect({ videos })} />
             <div>
               <h2>{videos.title}</h2>
               <h3>{videos.user}</h3>
